@@ -1,23 +1,26 @@
 ﻿/// Date	: 27/03/2018
 /// Company	: Fantastic, yes
-/// Author	: Maximilian Rötzer
+/// Author	: Maximilian Rötzler
 /// License	: This code is licensed under MIT license
 
 using UnityEngine;
 using UnityEditor;
-/*
-[AddToToolbar ("DebugControl", "Debug Render Modes", ToolbarGroup.Art, 0)]
-public class DebugShaderControl : ToolbarControl
+
+namespace FantasticYes.Tools
 {
-	private DebugShaders m_debugShaders;
-
-	public override void OnGUI ()
+	[AddToToolbar ("DebugControl", "Debug Render Modes", ToolbarGroup.Art, 0)]
+	public class DebugShaderControl : ToolbarControl
 	{
-		m_debugShaders.OnGUI (GUIContent.none));
-	}
+		private DebugShaders m_debugShaders;
 
-	private void OnEnable ()
-	{
-		m_debugShaders = new DebugShaders ();
+		public override void OnGUI ()
+		{
+			m_debugShaders.OnGUI (GUIContent.none);
+		}
+
+		private void OnEnable ()
+		{
+			m_debugShaders = new DebugShaders ();
+		}
 	}
-}*/
+}

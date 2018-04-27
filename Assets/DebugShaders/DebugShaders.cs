@@ -1,6 +1,6 @@
 ﻿/// Date	: 27/03/2018
 /// Company	: Fantastic, yes
-/// Author	: Maximilian Rötzer
+/// Author	: Maximilian Rötzler
 /// License	: This code is licensed under MIT license
 
 using UnityEngine;
