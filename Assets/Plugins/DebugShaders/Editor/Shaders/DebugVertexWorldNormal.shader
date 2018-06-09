@@ -1,7 +1,7 @@
 ﻿// Shader by Keijiro Takahashi
 // https://github.com/keijiro
 
-Shader "Debug/Vertex Normal"
+Shader "Debug/Vertex World Normal"
 {
 	Properties
 	{ }

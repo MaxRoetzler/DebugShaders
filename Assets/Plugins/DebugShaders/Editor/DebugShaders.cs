@@ -48,10 +48,14 @@ public class DebugShaders
 		}
 	}
 
-	public void Draw (GUIContent guiContent)
+	/// <summary>
+	/// Draw the DebugShaders UI control.
+	/// </summary>
+	/// <param name="rect"></param>
+	public void Draw (Rect rect)
 	{
 		EditorGUI.BeginChangeCheck ();
-		m_selection = EditorGUILayout.Popup (guiContent, m_selection, m_labels);
+		m_selection = EditorGUI.Popup (rect, GUIContent.none, m_selection, m_labels);
 
 		if (EditorGUI.EndChangeCheck ())
 		{
@@ -67,7 +71,7 @@ public class DebugShaders
 					if (ShaderUtil.GetPropertyType (shader, i) == ShaderUtil.ShaderPropertyType.TexEnv)
 					{
 						string textureName = ShaderUtil.GetPropertyName (shader, i);
-						Texture2D textureFile = AssetDatabase.LoadAssetAtPath<Texture2D> (m_path + "/Textures/" + textureName.TrimStart ('_') + ".png");
+						Texture2D textureFile = AssetDatabase.LoadAssetAtPath<Texture2D> (m_path + "/Editor/Textures/" + textureName.TrimStart ('_') + ".png");
 
 						if (textureFile != null)
 						{
